@@ -55,7 +55,7 @@ const onDeleteAllBtnClick = (e) => {
   e.preventDefault();
 }
 
-
+// Call app:
 loadAllEventsListeners();
 
 
