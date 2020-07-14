@@ -30,6 +30,13 @@ const onAddTaskBtnClick = (e) => {
     li.innerHTML = `<input type="checkbox" id=${checkboxCtrlNumber.toString()}> 
     <label for=${checkboxCtrlNumber.toString()}>${task.value}</label>`
     checkboxCtrlNumber += 1;
+    const link = document.createElement('a');
+    // Add class
+    link.className = 'delete-item secondary-content';
+    // Add icon html
+    link.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+    // Append the link to li
+    li.appendChild(link);
     // Append li to ul
     taskList.appendChild(li);
     // Clear input
