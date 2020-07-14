@@ -26,7 +26,6 @@ const onAddTaskBtnClick = (e) => {
     // Add class
     li.className = 'collection-item';
     // Create text node and append to li
-    // li.appendChild(document.createTextNode(task.value));
     li.innerHTML = `<input type="checkbox" id=${checkboxCtrlNumber.toString()}> 
     <label for=${checkboxCtrlNumber.toString()}>${task.value}</label>`
     checkboxCtrlNumber += 1;
