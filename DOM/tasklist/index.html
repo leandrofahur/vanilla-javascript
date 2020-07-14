@@ -8,6 +8,11 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Task List</title>
+  <style>
+    ul .content{
+      list-style-type: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -36,7 +41,12 @@
                   <input type="text" name="task-filter" id="task-filter">
                   <label for="task-filter">Search Task</label>                    
                 </div>
-                <ul class="collection"></ul>
+                <ul class="collection">
+                  <!-- <li class="collection-item">
+                      <input type="checkbox" id="1"> 
+                      <label for="1">Task 01</label>
+                  </li> -->
+                </ul>
                 <a id="delete-task-btn" class="waves-effect red waves-light btn">Delete All<i class="material-icons right">delete</i></a>
               </div>
             </div>

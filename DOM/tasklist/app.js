@@ -5,7 +5,9 @@ const taskFilter = document.getElementById('task-filter');
 const deleteTaskBtn = document.getElementById('delete-task-btn');    
 const taskList = document.querySelector('.collection');              
 
-
+// UTIL vars:
+// This variable needs to be reseted every time the list is cleared!
+let checkboxCtrlNumber = 0; 
 
 // Load all events listeners:
 const loadAllEventsListeners = () => {
@@ -14,13 +16,26 @@ const loadAllEventsListeners = () => {
 }
 
 // Handle the ( Add Task ) button:
-const onAddTaskBtnClick = () => {
+const onAddTaskBtnClick = (e) => {
   // Check if there is something in the field:
   if(task.value === '') {
     alert('Add a new task');
   } else {
-    // console.log(task.value);
+    // Create li element
+    const li = document.createElement('li');
+    // Add class
+    li.className = 'collection-item';
+    // Create text node and append to li
+    // li.appendChild(document.createTextNode(task.value));
+    li.innerHTML = `<input type="checkbox" id=${checkboxCtrlNumber.toString()}> 
+    <label for=${checkboxCtrlNumber.toString()}>${task.value}</label>`
+    checkboxCtrlNumber += 1;
+    // Append li to ul
+    taskList.appendChild(li);
+    // Clear input
+    task.value = '';
     
+    e.preventDefault();
   }
 }
 
