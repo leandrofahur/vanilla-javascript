@@ -6,9 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Task List</title>
 </head>
 <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main-card" class="card grey lighten-3">
+          <div class="card-content">
+            <span class="card-title center-align">TO-DO LIST</span>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" id="task" name="task">
+                <label for="task">Add task</label>
+              </div>
+              <div class="input-field col s12">
+                <a id="add-task" class="waves-effect waves-light btn">Add Task<i class="material-icons right">send</i></a>
+              </div>
+            </div>
+            <div class="row">                
+              <div class="input-field col s12">
+                <input type="text" id="filter" name="filter">
+                <label for="filter">Search task</label>
+              </div>
+              <div class="input-field col s12">
+                <a id="delete-task" class="waves-effect red waves-light btn">Delete<i class="material-icons right">delete
+                </i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <span class="card-title center-align">TASKS</span>
+            <ul class="collection">
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -17,3 +56,40 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div id="main-card" class="card grey lighten-4">
+        <div class="card-content">
+          <span class="card-title center-align">To-Do List</span>
+      
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="task" name="task">
+              <label for="task">Add task</label>
+            </div>
+            <div class="input-field col s12">
+      
+                <a class="waves-effect waves-light btn">Add Task<i class="material-icons right">send</i></a>
+      
+            </div>
+            <div class="row"></div>
+            <div class="input-field col s12">
+              <input type="text" id="filter" name="filter">
+              <label for="filter">Search</label>
+      
+                <a class="waves-effect waves-light btn">Search<i class="material-icons right">location_searching
+                </i></a>
+                <a class="waves-effect waves-light btn">Delete<i class="material-icons right">delete</i></a>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
