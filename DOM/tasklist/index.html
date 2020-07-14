@@ -14,39 +14,38 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <div id="main-card" class="card grey lighten-3">
+        <div id="main-card" class="card yellow lighten-3">
           <div class="card-content">
-            <span class="card-title center-align">TO-DO LIST</span>
+            <span class="card-title">TO-DO LIST</span>
             <div class="row">
-              <div class="input-field col s12">
-                <input type="text" id="task-input" name="task-input">
-                <label for="task-input">Add task</label>
-              </div>
-              <div class="input-field col s12">
-                <a id="add-task" class="waves-effect waves-light btn">Add Task<i class="material-icons right">send</i></a>
-              </div>
-            </div>
-            <div class="row">                
-              <div class="input-field col s12">
-                <input type="text" id="task-filter" name="task-filter">
-                <label for="task-filter">Search task</label>
-              </div>
-              <div class="input-field col s12">
-                <a id="delete-task" class="waves-effect red waves-light btn">Delete<i class="material-icons right">delete
-                </i></a>
+              <div class="col s12">
+                <form id="task-form">
+                  <div class="input-field col s12">
+                    <input type="text" name="task" id="task">
+                    <label for="task">New Task</label>                    
+                  </div>
+                  <a id="add-task" class="waves-effect black waves-light btn">Add Task<i class="material-icons right">send</i></a>
+                </form>
               </div>
             </div>
           </div>
           <div class="card-action">
-            <span class="card-title center-align">TASKS</span>
-            <ul class="collection">              
-            </ul>
+            <div class="row">
+              <div class="col s12">
+                <div class="input-field col s12">
+                  <input type="text" name="task-filter" id="task-filter">
+                  <label for="task-filter">New Task</label>                    
+                </div>
+                <ul class="collection"></ul>
+                <a id="delete-task" class="waves-effect red waves-light btn">Delete All<i class="material-icons right">delete</i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -55,6 +54,59 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div id="main-card" class="card grey lighten-3">
+        <div class="card-content">
+          <span class="card-title center-align">TO-DO LIST</span>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="task-input" name="task-input">
+              <label for="task-input">Add task</label>
+            </div>
+            <div class="input-field col s12">
+              <a id="add-task" class="waves-effect waves-light btn">Add Task<i class="material-icons right">send</i></a>
+            </div>
+          </div>
+          <div class="row">                
+            <div class="input-field col s12">
+              <input type="text" id="task-filter" name="task-filter">
+              <label for="task-filter">Search task</label>
+            </div>
+            <div class="input-field col s12">
+              <a id="delete-task" class="waves-effect red waves-light btn">Delete<i class="material-icons right">delete
+              </i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <span class="card-title center-align">TASKS</span>
+          <ul class="collection">              
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
 
 
 
