@@ -13,6 +13,7 @@ let checkboxCtrlNumber = 0;
 const loadAllEventsListeners = () => {
   // Click on btn ( Add Task ):
   addTaskBtn.addEventListener('click', onAddTaskBtnClick);
+  deleteTaskBtn.addEventListener('click', onDeleteAllBtnClick);
 }
 
 // Handle the ( Add Task ) button:
@@ -43,6 +44,15 @@ const onAddTaskBtnClick = (e) => {
     
     e.preventDefault();
   }
+}
+
+// Handle the delete all tasks button:
+const onDeleteAllBtnClick = (e) => {
+  // Gets the list:
+  while(taskList.firstChild) {
+    taskList.removeChild(taskList.firstChild);
+  }
+  e.preventDefault();
 }
 
 
