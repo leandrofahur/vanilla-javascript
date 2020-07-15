@@ -5,7 +5,7 @@ const showMillionairesBtn = document.getElementById('show-millionaires');
 const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
 
-const data = []
+let data = []
 
 // getRandomUser();
 // getRandomUser();
@@ -28,6 +28,13 @@ const addData = (obj) => {
   onUpdateDOM();
 }
 
+const doubleMoney = () => {
+  data = data.map(user => {
+    return { ...user, money: user.money * 2 };
+  });
+  onUpdateDOM();
+}
+
 const onUpdateDOM = (providedData = data) => {
   // Clear main div
   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
@@ -45,5 +52,8 @@ function formatMoney(number) {
   return '$' + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
+
+
 // Event Listeners:
 addUserBtn.addEventListener('click', getRandomUser);
+doubleBtn.addEventListener('click', doubleMoney);
