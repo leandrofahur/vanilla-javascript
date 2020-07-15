@@ -37,11 +37,23 @@ const li = document.createElement('li');
 li.appendChild(document.createTextNode('Item #4'));
 console.log(li);
 
-const ul = document.querySelector('ul');
-console.log(ul)
-ul.appendChild(li)
+// const ul = document.querySelector('ul');
+// console.log(ul)
+// ul.appendChild(li)
+// ul.removeChild(nodeList[2]);
 
-ul.removeChild(nodeList[2]);
+let text = 'Item #5';
+const nodeListArray = Array.from(nodeList);
+nodeListArray.forEach(item => {
+  if(item.textContent === text.toString()) {
+    console.log('Found');
+  } else {
+    console.log('Not found')
+  }
+  
+});
+
+
 
 
 
