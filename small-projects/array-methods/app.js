@@ -40,6 +40,11 @@ const sortRichest = () => {
   onUpdateDOM();
 }
 
+const showMillionaires = () => {
+  data = data.filter((user) => user.money > 1000000)
+  onUpdateDOM();
+}
+
 const onUpdateDOM = (providedData = data) => {
   // Clear main div
   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
@@ -63,3 +68,4 @@ function formatMoney(number) {
 addUserBtn.addEventListener('click', getRandomUser);
 doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortRichest);
+showMillionairesBtn.addEventListener('click', showMillionaires);
