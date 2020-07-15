@@ -30,6 +30,45 @@ const paddle = {
 
 let score = 0;
 
+// Bricks:
+const brickRowCount = 9;
+const brickColCount = 5;
+
+// Create brick variables:
+const brickInfo = {
+  width: 70,
+  height: 20,
+  padding: 10,
+  offsetX: 45,
+  offsetY: 60,
+  visible: true
+};
+
+
+// Create bricks:
+const bricks = [];
+for (let i = 0; i < brickRowCount; i++) {
+  bricks[i] = [];
+  for (let j = 0; j < brickColCount; j++) {
+    let x = i * (brickInfo.width + brickInfo.padding) + brickInfo.offsetX;
+    let y = j * (brickInfo.height + brickInfo.padding) + brickInfo.offsetY;
+    bricks[i][j] = { x, y, ...brickInfo };
+  }
+}
+
+// Draw bricks on canvas
+function drawBricks() {
+  bricks.forEach(column => {
+    column.forEach(brick => {
+      ctx.beginPath();
+      ctx.rect(brick.x, brick.y, brick.width, brick.height);
+      ctx.fillStyle = brick.visible ? '#0095dd' : 'transparent';
+      ctx.fill();
+      ctx.closePath();
+    });
+  });
+}
+
 // Draw paddle on canvas:
 const drawPaddle = () => {
   ctx.beginPath();
@@ -58,6 +97,7 @@ const draw = () => {
   drawBall();
   drawPaddle();
   drawScore();
+  drawBricks();
 }
 
 // Event listeners:
