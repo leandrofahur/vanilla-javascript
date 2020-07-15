@@ -23,13 +23,26 @@
 // });
 
 // Nodelist: (querySelectorAll return a nodelist)
-const ul = document.querySelectorAll('ul li');
-console.log(ul)
+const nodeList = document.querySelectorAll('ul li');
+console.log(nodeList)
 
-ul.forEach((li,index) => {
-  li.style.color = 'blue';
-  console.log(li);
-})
+// ul.forEach((li,index) => {
+//   li.style.color = 'blue';
+//   console.log(li);
+// })
+
+const li = document.createElement('li');
+// let text = 'Item #4';
+// li.textContent = text;
+li.appendChild(document.createTextNode('Item #4'));
+console.log(li);
+
+const ul = document.querySelector('ul');
+console.log(ul)
+ul.appendChild(li)
+
+ul.removeChild(nodeList[2]);
+
 
 
 
