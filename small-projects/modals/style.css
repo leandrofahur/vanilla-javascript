@@ -134,7 +134,12 @@ button:focus {
   transform: translate(-50%, -50%);
 }
 
-
+.modal-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
 
 
 
