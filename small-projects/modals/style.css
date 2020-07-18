@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-  --modal-duration: 1s;
+  --modal-duration: 0.5s;
   --primary-color: #30336b;
   --secondary-color: #be2edd;
 }
@@ -124,6 +124,13 @@ button:focus {
   left: 0;
   bottom: 0;
   right: 0;
+
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-container.show-modal {
+  display: block;
 }
 
 .modal {
@@ -176,4 +183,13 @@ button:focus {
 .modal-header h3 {
   margin: 0;
   /* border-bottom: 1px solid #333; */
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  } 
+  to {
+    opacity: 1;
+  }
 }
