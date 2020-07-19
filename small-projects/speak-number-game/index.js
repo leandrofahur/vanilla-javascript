@@ -15,7 +15,7 @@ const writeMsg = (msg) => {
 
 const checkNumber = (msg) => {
   const num = +msg;
-  if(isNaN) {
+  if(Number.isNaN(num)) {
     msgElem.innerHTML += `<div>That is not a valid number</div>`;
     return;
   }
@@ -24,16 +24,13 @@ const checkNumber = (msg) => {
     return;
   }
   if(num === randomNumber) {
-    msgElem.innerHTML += `<div>You are right!</div>`;
-    return;
-  }
-  if(num < randomNumber) {
-    msgElem.innerHTML += `<div>go higher.</div>`;
-    return;
-  }
-  if(num > randomNumber) {
+    document.body.innerHTML = `
+      <h2>You are right!</h2>
+      <button id="play-again" class="play-again">Play again</button>`;
+  } else if(num < randomNumber) {
+    msgElem.innerHTML += `<div>Go higher.</div>`;
+  } else {
     msgElem.innerHTML += `<div>Go lower</div>`;
-    return;
   }
 }
 
@@ -53,5 +50,6 @@ const onSpeak = (evt) => {
 
 recognition.start();
 recognition.addEventListener('result', onSpeak);
+recognition.addEventListener('end', () => recognition.start());
 
 
