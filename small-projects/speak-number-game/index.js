@@ -50,6 +50,11 @@ const onSpeak = (evt) => {
 
 recognition.start();
 recognition.addEventListener('result', onSpeak);
-recognition.addEventListener('end', () => recognition.start());
+recognition.addEventListener('end', () => { recognition.start() });
+document.body.addEventListener('click', (evt) => {
+  if(evt.target.id === 'play-again') {
+    window.location.reload();
+  }
+})
 
 
