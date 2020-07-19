@@ -13,6 +13,29 @@ const writeMsg = (msg) => {
     <span class="box">${msg}</span>`;
 }
 
+const checkNumber = (msg) => {
+  const num = +msg;
+  if(isNaN) {
+    msgElem.innerHTML += `<div>That is not a valid number</div>`;
+    return;
+  }
+  if(num > 100 || num < 0) {
+    msgElem.innerHTML += `<div>Number must be between 0 - 100</div>`;
+    return;
+  }
+  if(num === randomNumber) {
+    msgElem.innerHTML += `<div>You are right!</div>`;
+    return;
+  }
+  if(num < randomNumber) {
+    msgElem.innerHTML += `<div>go higher.</div>`;
+    return;
+  }
+  if(num > randomNumber) {
+    msgElem.innerHTML += `<div>Go lower</div>`;
+    return;
+  }
+}
 
 
 const randomNumber = getRandomNumber();
@@ -22,10 +45,9 @@ const onSpeak = (evt) => {
   const msg = evt.results[0][0].transcript;
   // console.log(msg);
   writeMsg(msg);
-  console.log(msg);
-  console.log(msgElem);
-
-  // checkNumber(msg);
+  // console.log(msg);
+  // console.log(msgElem);
+  checkNumber(msg);
 }
 
 
