@@ -1,16 +1,16 @@
 class Github {
   constructor() {
-    this.client_id = 'bd17bf1f015daa23db8c';
-    this.client_secret = '60dddcb3dde402427edb9a5cf151020d9096038d';
+    this.client_id = 'd9308aacf8b204d361fd';
+    this.client_secret = '84969aeef73956f4ec9e8716d1840532802bb81b';
   }
 
   async getUser(user) {
     const profileResponse = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
-    const profileJson = await profileResponse.json();
+    const profile = await profileResponse.json();
+
     return {
-      profileJson
+      profile
     }
   }
 }
-
