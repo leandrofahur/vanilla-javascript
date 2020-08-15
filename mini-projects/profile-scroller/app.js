@@ -34,6 +34,7 @@ const data = [
 ];
 
 const profiles = profileIterator(data);
+nextProfile()
 
 document.getElementById('next').addEventListener('click', nextProfile);
 
